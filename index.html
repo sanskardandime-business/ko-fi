@@ -3,24 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Support Me on Ko-fi</title>
+  <title>Support Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f0f0f0;
+      text-align: center;
+    }
+    .donation-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .donation-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    .donation-box h2 {
+      margin-bottom: 15px;
+    }
+    .qr-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-top: 10px;
+    }
+    .disclaimer {
+      margin-top: 30px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; padding: 40px; background: #f0f0f0; text-align: center;">
+<body>
 
   <h1>Support My Work</h1>
-  <p>If you'd like to donate, you can do it directly through the panel below:</p>
+  <p>Choose your preferred payment method below:</p>
 
-  <!-- Ko-fi Donation Panel Embed -->
-  <iframe id="kofiframe" 
-          src="https://ko-fi.com/sanskardandime_business/?hidefeed=true&widget=true&embed=true&preview=true" 
-          style="border:none; width:100%; max-width: 500px; height:712px; padding:0; background:#f9f9f9;" 
-          title="sanskardandime_business">
-  </iframe>
+  <div class="donation-container">
 
-  <!-- 🔔 Donation Info Disclaimer -->
-  <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">
-    <strong>Note:</strong> Donations are processed via PayPal and will be received through my father's account, with his full consent. Thank you for your support!
+    <!-- 🌍 Ko-fi Donation Box -->
+    <div class="donation-box">
+      <h2>International Payments (Ko-fi)</h2>
+      <iframe id="kofiframe" 
+              src="https://ko-fi.com/sanskardandime_business/?hidefeed=true&widget=true&embed=true&preview=true" 
+              style="border:none; width:100%; height:712px; padding:0; background:#f9f9f9;" 
+              title="sanskardandime_business">
+      </iframe>
+    </div>
+
+    <!-- 🇮🇳 UPI Donation Box -->
+    <div class="donation-box">
+      <h2>Indian Payments (UPI)</h2>
+      <p>Scan the QR code below using any UPI app (PhonePe, GPay, Paytm, etc.)</p>
+      <img src="your-upi-qr-code.png" alt="UPI QR Code" class="qr-image" />
+    </div>
+
+  </div>
+
+  <p class="disclaimer">
+    <strong>Note:</strong> International donations via Ko-fi are processed through PayPal and will be received through my father's account, with his full consent. Thank you for your support!
   </p>
-  
+
 </body>
 </html>
